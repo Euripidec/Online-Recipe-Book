@@ -1,0 +1,166 @@
+html {
+    --s: 80px; /* control the size */
+    --c: #542437;
+    
+    --_g: 
+      #0000 calc(-650%/13) calc(50%/13),var(--c) 0 calc(100%/13),
+      #0000 0 calc(150%/13),var(--c) 0 calc(200%/13),
+      #0000 0 calc(250%/13),var(--c) 0 calc(300%/13);
+    --_g0: repeating-linear-gradient( 45deg,var(--_g));
+    --_g1: repeating-linear-gradient(-45deg,var(--_g));
+    background:
+      var(--_g0),var(--_g0) var(--s) var(--s),
+      var(--_g1),var(--_g1) var(--s) var(--s) #C02942;
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+  }
+body {
+    color: #000000; 
+    font-size: 16px; 
+    font-weight: bold; 
+    font-size: medium;
+}
+
+header {
+    padding: 10px 18px;
+    background-color: silver
+    
+}
+
+li {
+    color: #ae759f
+}
+
+
+
+
+#breadcrumb {
+    padding: 10px 18px;
+    background-color: silver
+}
+
+#breadcrumb>li {
+    display: inline;
+}
+
+#breadcrumb>li>a {
+    color: #026ece;
+    text-decoration: none;
+}
+
+#breadcrumb>li>a:hover {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+
+
+#breadcrumb li+li:before {
+    padding: 4px;
+    content: "/"
+}
+
+#breadcrumb > li:hover > ul {
+    display: block;
+   }
+   
+
+
+
+#breadcrumb > li > ul {
+    display: none;
+    position: absolute;
+    background-color: silver;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   }
+
+   
+
+
+
+#breadcrumb .submenu {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 4px;
+
+}
+
+#breadcrumb .submenu li+li:before {
+    content: none
+}
+
+#breadcrumb .submenu li>a {
+    
+    color: teal;
+}
+
+#breadcrumb .submenu li>a:hover{
+    color: cornflowerblue;
+}
+
+
+
+
+
+   
+
+section {
+text-align: center;
+padding: 10px 18px;
+background-color: silver
+}
+
+
+
+hr {
+    border: none;
+    border-top: 3px double #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+.stylish::after {
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+  }
+
+  a {
+    border: 2px solid #e30b5d;
+    border-radius: 5px; 
+    transition: border 0.3s ease; 
+    text-decoration: none;
+    color: teal
+   }
+   
+   a:hover {
+    border: 2px solid whitesmoke;
+    color: cornflowerblue; 
+   }
+  
+   .menulink {
+    border: none;
+   }
+
+   .current {
+    display: inline;
+    color: whitesmoke
+   }
+
+   .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    gap: 20px; /* Optional: Adds space between the list and table */
+   }
+   
+   #prep {
+    padding-right: 40px ;
+    border-right: 1px solid #000;
+   }
+   
+   #prep>li {
+    padding-bottom: 16px;
+   }
